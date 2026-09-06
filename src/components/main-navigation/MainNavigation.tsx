@@ -36,8 +36,8 @@ export default function MainNavigation({
         {/* Logo */}
         {!isDashboard && (
             <Logo
-            type="dark"
-            className="h-[88px] w-[180px]"
+                type="light"
+                className="h-[88px] w-[180px]"
             />
         )}
 
@@ -51,12 +51,12 @@ export default function MainNavigation({
             {!isDashboard && (
             <div className="flex items-center">
                 <MainNavigationItem
-                label="Home"
-                active
+                    label="Home"
+                    active
                 />
 
                 <MainNavigationItem
-                label="Courses"
+                    label="Courses"
                 />
 
                 <MainNavigationItem
@@ -92,8 +92,8 @@ export default function MainNavigation({
                 <>
                 <div className="flex items-center">
                     <button
-                    type="button"
-                    className="rounded-xl px-4 py-3 text-sm font-medium leading-[1.25] text-white"
+                        type="button"
+                        className="rounded-xl px-4 py-3 text-sm font-medium leading-[1.25] text-white"
                     >
                     Login
                     </button>

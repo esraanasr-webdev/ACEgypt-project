@@ -9,7 +9,7 @@ type LogoProps ={
 
 const logoSources = {
     light: {
-        src: "/images/americancouncilLogo-light.png",
+        src: "/images/AmericanWhiteLogo.png",
         width: 180,
         height: 88,
     },

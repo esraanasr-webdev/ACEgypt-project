@@ -32,8 +32,8 @@ export default function TextInput({
     const isSuccess = status === "success";
 
     return (
-        <div className="w-full">
-        <label className="mb-2 block text-[14px] font-semibold leading-[1.25] text-[var(--color-grey-strong)]">
+        <div className="w-full mb-[24px]">
+        <label className="mb-2 block text-[16px] font-semibold leading-[1.25] text-[var(--color-grey-strong)]">
             {label}
         </label>
 

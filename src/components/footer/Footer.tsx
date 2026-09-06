@@ -22,7 +22,7 @@ export default function Footer() {
             <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-[1.1fr_2fr_1fr_1fr]">
             {/* Logo + Social Media */}
             <div>
-                <Logo type="light" />
+                <Logo type="dark" />
 
                 <div className="mt-5 flex items-center gap-2">
                     <Link

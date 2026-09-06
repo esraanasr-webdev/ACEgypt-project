@@ -10,8 +10,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "ACE Design 2026",
-  description: "ACE Design 2026 Educational Platform",
+  title: "ACEgypt",
+  description: "American Council Egypt",
 };
 
 export default function RootLayout({
