@@ -1,0 +1,50 @@
+:root {
+    /* =========================
+        Greys
+        ========================= */
+    --color-white: #ffffff;
+    --color-grey-light: #f8f9fa;
+    --color-grey-medium: #f0f0f0;
+    --color-grey-dark: #767676;
+    --color-grey-strong: #2b2b2b;
+    --color-grey-disable: #c4c4c4;
+
+    /* =========================
+        Blues
+        ========================= */
+    --color-blue-light: #eef6ff;
+    --color-blue-medium: #bed2e9;
+    --color-blue-vibrant: #0265d4;
+    --color-blue-dark: #004797;
+
+
+    /* =========================
+        Reds
+        ========================= */
+    --color-red-light: #fff4f7;
+    --color-red-dark: #d30032;
+
+    /* =========================
+        Violet
+        ========================= */
+    --color-violet-light: #f1efff;
+    --color-violet-dark: #7d6bf0;
+
+    /* =========================
+        Orange
+        ========================= */
+    --color-orange-light: #fff1de;
+    --color-orange-dark: #f49517;
+
+    /* =========================
+        Green
+        ========================= */
+    --color-green-light: #e8fff1;
+    --color-green-dark: #19864a;
+
+    --gradient-blue: linear-gradient(
+        90deg,
+        var(--color-blue-vibrant),
+        var(--color-blue-medium)
+    );
+}
