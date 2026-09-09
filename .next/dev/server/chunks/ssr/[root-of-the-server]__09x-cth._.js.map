@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 13, "column": 0}, "map": {"version":3,"sources":["file:///home/esraa/Public/acegypt/frontend/src/app/favicon.ico.mjs%20(structured%20image%20object)"],"sourcesContent":["import src from \"IMAGE\";\nexport default { src, width: 256, height: 256 }\n"],"names":["src","width","height"],"mappings":";;;;AAAA;;uCACe;IAAEA,KAAAA,0IAAG;IAAEC,OAAO;IAAKC,QAAQ;AAAI"}},
-    {"offset": {"line": 28, "column": 0}, "map": {"version":3,"sources":["file:///home/esraa/Public/acegypt/frontend/src/app/page.tsx"],"sourcesContent":["\nexport default function HomePage() {\n  return (\n    <>\n      {/* Homepage can have its own special hero/header */}\n      <section className=\"bg-[var(--color-blue-dark)]\">\n        <div className=\"mx-auto max-w-[1200px]\">\n          \n        </div>\n\n        {/* homepage hero */}\n      </section>\n\n      {/* homepage content */}\n    </>\n  );\n}"],"names":["HomePage","className"],"mappings":";;;;;;AACe,SAASA;IACtB,qBACE;kBAEE,cAAA,8OAAC;YAAQC,WAAU;sBACjB,cAAA,8OAAC;gBAAIA,WAAU;;;;;;;;;;;;;;;;AAUvB"}}]
-}

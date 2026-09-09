@@ -1,18 +1,15 @@
-import MainNavigation from "../components/main-navigation/MainNavigation";
+import AboutPartners from "../features/about/AboutPartners";
+import HeroSection from "../features/home/HeroSection";
+import LearningJourneySection from "../features/home/LearningJourneySection";
+import PopularCoursesSlider from "../features/home/PopularCoursesSlider";
 
 export default function HomePage() {
   return (
     <>
-      {/* Homepage can have its own special hero/header */}
-      <section className="bg-[var(--color-blue-dark)]">
-        <div className="mx-auto max-w-[1200px]">
-          <MainNavigation />
-        </div>
-
-        {/* homepage hero */}
-      </section>
-
-      {/* homepage content */}
+      <HeroSection/>
+      <AboutPartners />
+      <PopularCoursesSlider />
+      <LearningJourneySection />
     </>
   );
 }

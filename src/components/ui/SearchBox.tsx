@@ -39,7 +39,7 @@ export default function SearchBox({
             onChange={(event) => onChange?.(event.target.value)}
             className="
             w-full bg-transparent
-            text-[12px] text-[var(--color-grey-strong)]
+            text-[14px] text-[var(--color-grey-strong)]
             outline-none
             placeholder:text-[var(--color-grey-dark)]
             disabled:cursor-not-allowed

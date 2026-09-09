@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Logo from "../logo/Logo";
 import Button from "../ui/Button";
 import MainNavigationItem from "./MainNavigationItem";
@@ -35,10 +36,13 @@ export default function MainNavigation({
         >
         {/* Logo */}
         {!isDashboard && (
-            <Logo
-                type="light"
-                className="h-[88px] w-[180px]"
-            />
+            <Link href="/">
+                <Logo
+                    type="light"
+                    className="h-[88px] w-[180px]"
+                />
+            </Link>
+
         )}
 
         {/* Navigation */}

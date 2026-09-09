@@ -22,7 +22,10 @@ export default function Footer() {
             <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-[1.1fr_2fr_1fr_1fr]">
             {/* Logo + Social Media */}
             <div>
-                <Logo type="dark" />
+                <Link href="/">
+                    <Logo type="dark" />
+                </Link>
+                
 
                 <div className="mt-5 flex items-center gap-2">
                     <Link
@@ -66,11 +69,11 @@ export default function Footer() {
 
             {/* Contact */}
             <div>
-                <h3 className="mb-6 text-[14px] font-semibold text-[var(--color-grey-strong)]">
+                <h3 className="mb-6 text-[16px] font-semibold text-[var(--color-grey-strong)]">
                 Contact
                 </h3>
 
-                <div className="flex flex-col gap-4 text-[12px] text-[var(--color-grey-strong)]">
+                <div className="flex flex-col gap-4 text-[14px] text-[var(--color-grey-strong)]">
                 <div className="flex items-center gap-3">
                     <Smartphone
                     size={16}
@@ -122,11 +125,11 @@ export default function Footer() {
 
             {/* About Center */}
             <div>
-                <h3 className="mb-6 text-[14px] font-semibold text-[var(--color-grey-strong)]">
+                <h3 className="mb-6 text-[16px] font-semibold text-[var(--color-grey-strong)]">
                 About Center
                 </h3>
 
-                <nav className="flex flex-col gap-4 text-[12px] text-[var(--color-grey-strong)]">
+                <nav className="flex flex-col gap-4 text-[14px] text-[var(--color-grey-strong)]">
                 <Link href="/about" className="hover:underline">
                     About
                 </Link>
@@ -143,11 +146,11 @@ export default function Footer() {
 
             {/* Other Links */}
             <div>
-                <h3 className="mb-6 text-[14px] font-semibold text-[var(--color-grey-strong)]">
+                <h3 className="mb-6 text-[16px] font-semibold text-[var(--color-grey-strong)]">
                 Other Links
                 </h3>
 
-                <nav className="flex flex-col gap-4 text-[12px] text-[var(--color-grey-strong)]">
+                <nav className="flex flex-col gap-4 text-[14px] text-[var(--color-grey-strong)]">
                 <Link href="/courses" className="hover:underline">
                     Explore Courses
                 </Link>
@@ -164,24 +167,35 @@ export default function Footer() {
             </div>
 
             {/* Bottom Footer */}
-            <div className="mt-16 border-t border-dashed border-[var(--color-grey-medium)] pt-5">
-            <div className="flex flex-col gap-3 text-[10px] text-[var(--color-grey-strong)] sm:flex-row sm:items-center sm:justify-between">
-                <p>
-                © 2026 American Council Egypt. All rights reserved.
-                </p>
+            <div
+                className="
+                    relative mt-16 pt-5
+                    before:absolute
+                    before:top-0
+                    before:left-0
+                    before:h-px
+                    before:w-full
+                    before:bg-[repeating-linear-gradient(to_right,var(--color-grey-medium)_0_6px,transparent_6px_12px)]
+                    before:[mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]
+                "
+            >
+                <div className="flex flex-col gap-3 text-[12px] text-[var(--color-grey-strong)] sm:flex-row sm:items-center sm:justify-between">
+                    <p>
+                    © 2026 American Council Egypt. All rights reserved.
+                    </p>
 
-                <div className="flex items-center gap-1">
-                <Link href="/policy" className="hover:underline">
-                    Privacy Policy
-                </Link>
+                    <div className="flex items-center gap-1">
+                    <Link href="/policy" className="hover:underline">
+                        Privacy Policy
+                    </Link>
 
-                <span>|</span>
+                    <span>|</span>
 
-                <Link href="/terms" className="hover:underline">
-                    Terms & Conditions
-                </Link>
+                    <Link href="/terms" className="hover:underline">
+                        Terms & Conditions
+                    </Link>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
         </footer>

@@ -16,7 +16,7 @@ export default function BecomeTeacherBanner({
   buttonHref,
 }: BecomeTeacherBannerProps) {
   return (
-    <section className="relative overflow-hidden rounded-[28px] bg-[var(--color-blue-dark)] px-8 py-16 text-center text-white">
+    <section className="relative overflow-hidden rounded-[28px] bg-[var(--color-blue-dark)] px-8 py-16 text-center text-white mt-[120px]">
       {/* Decorative Figma shapes */}
       <div className="pointer-events-none absolute inset-0">
         <Image

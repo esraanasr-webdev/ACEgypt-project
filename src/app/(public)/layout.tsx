@@ -9,7 +9,7 @@ export default function PublicLayout({
     return (
         <>
         <div className="bg-[var(--color-blue-dark)] py-8">
-            <div className="mx-auto max-w-[1200px] px-6">
+            <div className="mx-auto max-w-[1200px]">
                 <MainNavigation />
             </div>
         </div>
