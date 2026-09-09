@@ -37,7 +37,7 @@ export default function LearningJourneySection() {
             "
         >
             {/* Left visual */}
-            <div className="relative min-h-[650px]">
+            <div className="relative min-h-[715px]">
             {/* Background grid image */}
             <div className="absolute inset-0">
                 <Image
@@ -53,16 +53,16 @@ export default function LearningJourneySection() {
                 className="
                 absolute
                 bottom-[80px]
-                left-[10px]
+                left-[-20px]
                 h-[540px]
                 w-[380px]
                 "
             >
                 <Image
-                src="/images/home/journey-person.png"
-                alt="ACE academic advisor"
-                fill
-                className="object-contain object-bottom"
+                    src="/images/home/journey-person.png"
+                    alt="ACE academic advisor"
+                    fill
+                    className="object-contain object-bottom"
                 />
             </div>
 
@@ -91,11 +91,11 @@ export default function LearningJourneySection() {
                 />
 
                 <div>
-                <p className="text-[18px] font-semibold text-[var(--color-orange-dark)]">
+                <p className="text-[20px] font-semibold text-[var(--color-orange-dark)]">
                     Free Consultation
                 </p>
 
-                <p className="mt-1 text-[14px] text-[var(--color-orange-dark)]">
+                <p className="mt-1 text-[16px] text-[var(--color-orange-dark)]">
                     Talk to an Advisor
                 </p>
                 </div>
@@ -120,17 +120,17 @@ export default function LearningJourneySection() {
                 "
             >
                 <Target
-                size={30}
-                strokeWidth={1.8}
-                className="text-[var(--color-green-dark)]"
+                    size={30}
+                    strokeWidth={1.8}
+                    className="text-[var(--color-green-dark)]"
                 />
 
                 <div>
-                <p className="text-[18px] font-semibold text-[var(--color-green-dark)]">
+                <p className="text-[20px] font-semibold text-[var(--color-green-dark)]">
                     Best Fit Program
                 </p>
 
-                <p className="mt-1 text-[14px] text-[var(--color-green-dark)]">
+                <p className="mt-1 text-[16px] text-[var(--color-green-dark)]">
                     For Your Goals
                 </p>
                 </div>

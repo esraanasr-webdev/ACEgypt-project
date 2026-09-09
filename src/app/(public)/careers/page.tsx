@@ -39,10 +39,10 @@ export default function CareersPage() {
                 </div>
                 
                 <BecomeTeacherBanner
-                title="Become a Teacher"
-                description="Join hundreds of learners who enjoy practicing English in a fun and stress-free environment."
-                buttonText="Explore Teaching Courses"
-                buttonHref="/courses"
+                    title="Become a Teacher"
+                    description="Join hundreds of learners who enjoy practicing English in a fun and stress-free environment."
+                    buttonText="Explore Teaching Courses"
+                    buttonHref="/courses"
                 />
             </section>
         </>
