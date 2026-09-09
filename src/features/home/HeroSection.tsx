@@ -7,18 +7,18 @@ import MainNavigation from "../../components/main-navigation/MainNavigation";
 export default function HeroSection() {
     return (
         <section
-        className="
-            relative
-            w-full
-            min-h-[720px]
-            overflow-hidden
-            rounded-tl-[36px]
-            rounded-tr-[36px]
-            rounded-b-[36px]
-            bg-[var(--color-blue-dark)]
-            text-white
-            my-10
-        "
+            className="
+                relative
+                w-full
+                min-h-[720px]
+                overflow-hidden
+                rounded-tl-[36px]
+                rounded-tr-[36px]
+                rounded-b-[36px]
+                bg-[var(--color-blue-dark)]
+                text-white
+                my-10
+            "
         >
         {/* Background image */}
         <div className="absolute inset-0">

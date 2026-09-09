@@ -40,7 +40,7 @@ export default function BecomeTeacherBanner({
           {title}
         </h2>
 
-        <p className="mt-5 max-w-[650px] text-[16px] font-normal leading-[1.6]">
+        <p className="mt-5 max-w-[766px] text-[16px] font-medium leading-[1.6]">
           {description}
         </p>
 
