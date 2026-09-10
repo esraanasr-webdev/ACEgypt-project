@@ -97,7 +97,7 @@ const galleryColumns = [
 
 export default function GallerySection() {
     return (
-        <section className="overflow-hidden pt-20">
+        <section className="overflow-hidden pt-20 px-[14px] pt-[10px]">
             {/* Gallery */}
             <div className="mx-auto max-w-[1500px] px-6">
                 <div

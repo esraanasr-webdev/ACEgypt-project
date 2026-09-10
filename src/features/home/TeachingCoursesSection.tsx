@@ -43,7 +43,7 @@ const teachingCourses = [
 
 export default function TeachingCoursesSection() {
     return (
-        <section className="py-20">
+        <section className="py-20 px-[14px] pt-[10px]">
             <div className="mx-auto max-w-[1200px]">
                 {/* Label */}
                 <div

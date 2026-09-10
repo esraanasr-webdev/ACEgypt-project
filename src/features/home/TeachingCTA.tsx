@@ -11,6 +11,7 @@ export default function TeachingCTA() {
             min-h-[250px]
             overflow-visible
             rounded-[28px]
+            px-[14px] pt-[10px]
         "
         >
         <div
@@ -85,7 +86,7 @@ export default function TeachingCTA() {
                 "
             >
             <div className="max-w-[433px] text-white">
-                <h3 className="text-[38px] font-bold leading-[1.2]">
+                <h3 className="text-[38px] font-bold leading-[1.2] sm:text-[25px] lg:text-[27px]">
                 READY TO TEACH WITH
                 <br />
                 CONFIDENCE?

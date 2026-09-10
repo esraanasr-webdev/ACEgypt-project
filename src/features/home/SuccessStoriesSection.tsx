@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function SuccessStoriesSection() {
     return (
-        <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <section className="px-4 py-16 sm:px-6 lg:px-8 px-[14px] pt-[10px]">
         <div
             className="
             mx-auto
