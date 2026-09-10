@@ -60,16 +60,15 @@ export default function MainNavigation({
                 />
 
                 <MainNavigationItem
-                    label="Courses"
+                    label="About"
                 />
 
                 <MainNavigationItem
-                    label="About"
+                    label="Courses"
                     hasDropdown
                 />
 
-                <MainNavigationItem label="Events" />
-                <MainNavigationItem label="Blog" />
+                <MainNavigationItem label="Careers" />
                 <MainNavigationItem label="Contact" />
             </div>
             )}
@@ -99,7 +98,7 @@ export default function MainNavigation({
                         type="button"
                         className="rounded-xl px-4 py-3 text-sm font-medium leading-[1.25] text-white"
                     >
-                    Login
+                        Sign in
                     </button>
 
                     <Button variant="secondary" size="small" >

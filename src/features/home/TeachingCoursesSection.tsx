@@ -12,7 +12,8 @@ const teachingCourses = [
         hours: "120 Hours",
         level: "All Levels",
         feature: "Internationally Accredited Certification",
-        price: "EGP 4200",
+        currency: "EGP",
+        amount: "1200",
     },
     {
         image: "/images/home/teaching/ielts.jpg",
@@ -23,7 +24,8 @@ const teachingCourses = [
         hours: "80 Hours",
         level: "Intermediate Level",
         feature: "Practical Teaching Strategies",
-        price: "EGP 3400",
+        currency: "EGP",
+        amount: "1200",
     },
     {
         image: "/images/home/teaching/young-learners.jpg",
@@ -34,7 +36,8 @@ const teachingCourses = [
         hours: "60 Hours",
         level: "Advanced Level",
         feature: "Child-Centered Methodologies",
-        price: "EGP 2500",
+        currency: "EGP",
+        amount: "1200",
     },
 ];
 
@@ -81,8 +84,8 @@ export default function TeachingCoursesSection() {
                 <div className="mt-9 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {teachingCourses.map((course) => (
                     <TeachingCourseCard
-                    key={course.title}
-                    {...course}
+                        key={course.title}
+                        {...course}
                     />
                 ))}
                 </div>

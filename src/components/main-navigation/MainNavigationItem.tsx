@@ -49,10 +49,10 @@ export default function MainNavigationItem({
             `}
         >
             <Image
-            src="/images/navigation/menu-gradient-line.svg"
-            alt=""
-            fill
-            className="object-fill"
+                src="/images/navigation/menu-gradient-line.svg"
+                alt=""
+                fill
+                className="object-fill"
             />
         </div>
         </button>

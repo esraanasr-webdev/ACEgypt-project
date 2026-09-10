@@ -29,7 +29,7 @@ const partners = [
 
 export default function AboutPartners() {
     return (
-        <section className="mx-auto max-w-[1200px] px-6 py-14">
+        <section className="mx-auto max-w-[1200px] pt-10">
         <div
             className="
             grid

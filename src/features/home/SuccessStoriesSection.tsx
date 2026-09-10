@@ -116,7 +116,16 @@ export default function SuccessStoriesSection() {
                         really interactive. I improved my speaking skills in a short
                         time.”
                     </p>
-
+                    {/* Gradient dashed divider */}
+                    <div
+                        className="
+                            mt-6
+                            h-[1px]
+                            w-full
+                            bg-[repeating-linear-gradient(to_right,#D9D9D9_0px,#D9D9D9_8px,transparent_5px,transparent_12px)]
+                            [mask-image:linear-gradient(to_right,transparent,black_40%,black_40%,transparent)]
+                        "
+                    />
                     <div className="mt-8 flex items-center gap-3">
                     <div
                         className="
@@ -164,7 +173,15 @@ export default function SuccessStoriesSection() {
                         “I joined to improve my career, and it really worked. The
                         practical approach made a big difference for me.”
                     </p>
-
+                    <div
+                        className="
+                            mt-6
+                            h-[1px]
+                            w-full
+                            bg-[repeating-linear-gradient(to_right,#D9D9D9_0px,#D9D9D9_8px,transparent_5px,transparent_12px)]
+                            [mask-image:linear-gradient(to_right,transparent,black_40%,black_40%,transparent)]
+                        "
+                    />
                     <div className="mt-8 flex items-center gap-3">
                         <div className="relative h-[34px] w-[34px] overflow-hidden rounded-full">
                         <Image
@@ -212,8 +229,16 @@ export default function SuccessStoriesSection() {
                     work. I can now communicate with international clients much
                     more easily.”
                     </p>
-
-                    <div className="mt-8 flex items-center gap-3 border-t border-dashed border-white/15 pt-5">
+                    <div
+                        className="
+                            mt-6
+                            h-[1px]
+                            w-full
+                            bg-[repeating-linear-gradient(to_right,#D9D9D9_0px,#D9D9D9_8px,transparent_5px,transparent_12px)]
+                            [mask-image:linear-gradient(to_right,transparent,black_40%,black_40%,transparent)]
+                        "
+                    />
+                    <div className="mt-8 flex items-center gap-3">
                     <div className="relative h-[34px] w-[34px] overflow-hidden rounded-full">
                         <Image
                         src="/images/home/success/ahmed.png"

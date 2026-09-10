@@ -14,7 +14,8 @@ type TeachingCourseCardProps = {
     hours: string;
     level: string;
     feature: string;
-    price: string;
+    currency?: string;
+    amount: string;
 };
 
 export default function TeachingCourseCard({
@@ -26,7 +27,8 @@ export default function TeachingCourseCard({
     hours,
     level,
     feature,
-    price,
+    currency,
+    amount
     }: TeachingCourseCardProps) {
     const online = badge === "Online";
 
@@ -108,11 +110,43 @@ export default function TeachingCourseCard({
                     </div>
                 </div>
 
+                    {/* Gradient dashed divider */}
+                    <div
+                        className="
+                            m-6
+                            h-[1px]
+                            w-full
+                            bg-[repeating-linear-gradient(to_right,#D9D9D9_0px,#D9D9D9_8px,transparent_5px,transparent_12px)]
+                            [mask-image:linear-gradient(to_right,transparent,black_40%,black_40%,transparent)]
+                        "
+                    />
+                    
                 {/* Price */}
-                <div className="mt-6 border-t border-dashed border-[var(--color-grey-medium)] pt-5">
-                <p className="text-[20px] font-medium text-[var(--color-blue-dark)]">
-                    {price}
-                </p>
+                <div className="flex items-baseline gap-1  text-[20px]">
+                    {currency && (
+                        <span
+                            className={`
+                                font-normal
+                                text-[var(--color-blue-dark)]
+                            `}
+                        >
+                            {currency}
+                        </span>
+                        )}
+
+                        <span
+                            className={`
+                                font-semibold
+                                leading-none
+                                ${
+                                    amount === "FREE"
+                                        ? "text-[var(--color-green-dark)]"
+                                        : "text-[var(--color-blue-dark)]"
+                                }
+                            `}
+                        >
+                            {amount}
+                        </span>
                 </div>
             </div>
         </article>

@@ -15,7 +15,7 @@ export default function PopularCoursesSlider() {
     const popularCourses = courses.slice(0, 8);
 
     return (
-        <section className="mx-auto max-w-[1200px] px-6 py-20">
+        <section className="mx-auto max-w-[1200px] py-20">
         {/* Heading */}
         <div className="flex items-end justify-between gap-6">
             <div>
@@ -33,16 +33,16 @@ export default function PopularCoursesSlider() {
             </div>
 
             <Link
-            href="/courses"
-            className="
-                hidden
-                items-center
-                gap-2
-                text-[16px]
-                font-medium
-                text-[var(--color-blue-dark)]
-                md:flex
-            "
+                href="/courses"
+                className="
+                    hidden
+                    items-center
+                    gap-2
+                    text-[16px]
+                    font-medium
+                    text-[var(--color-blue-dark)]
+                    md:flex
+                "
             >
             All Courses
             <ChevronRight size={20} />
@@ -79,7 +79,8 @@ export default function PopularCoursesSlider() {
                     badge={course.deliveryMode}
                     title={course.title}
                     description={course.description}
-                    price={course.price}
+                    currency={course.currency}
+                    amount={course.amount}
                     actionText={course.category}
                     variant="compact"
                 />

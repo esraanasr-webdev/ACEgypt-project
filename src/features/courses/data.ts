@@ -7,7 +7,8 @@ export const courses: Course[] = [
         description:
         "This course is designed for ELT professionals who want to master IELTS teaching.",
         image: "/images/courses/ielts-coach.jpg",
-        price: "EGP 1200",
+        currency: "EGP",
+        amount: "1200",
         category: "General English",
         deliveryMode: "Online",
     },
@@ -17,7 +18,8 @@ export const courses: Course[] = [
         description:
         "TKT is a series of modular teaching qualifications which test your teaching knowledge.",
         image: "/images/courses/tkt.jpg",
-        price: "EGP 1350",
+        currency: "EGP",
+        amount: "1200",
         category: "ESP",
         deliveryMode: "In-person",
     },
@@ -27,7 +29,7 @@ export const courses: Course[] = [
         description:
         "The ESL Demo Mastery Course at American Council Egypt is designed for teachers.",
         image: "/images/courses/esl.jpg",
-        price: "FREE",
+        amount: "FREE",
         category: "Corporate Training",
         deliveryMode: "Hybrid",
     },
@@ -37,7 +39,8 @@ export const courses: Course[] = [
         description:
         "This course is designed for ELT professionals who want to master IELTS teaching.",
         image: "/images/courses/classroom.jpg",
-        price: "EGP 1200",
+        currency: "EGP",
+        amount: "1200",
         category: "General English",
         deliveryMode: "Online",
     },
@@ -47,7 +50,8 @@ export const courses: Course[] = [
         description:
         "This winter, ignite your child’s potential with our engaging English program.",
         image: "/images/courses/kids.jpg",
-        price: "EGP 1350",
+        currency: "EGP",
+        amount: "1200",
         category: "ESP",
         deliveryMode: "In-person",
     },
@@ -57,7 +61,7 @@ export const courses: Course[] = [
         description:
         "Give your son or daughter the opportunity to improve their English.",
         image: "/images/courses/youth.jpg",
-        price: "FREE",
+        amount: "FREE",
         category: "Corporate Training",
         deliveryMode: "Hybrid",
     },

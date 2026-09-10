@@ -8,9 +8,10 @@ export type Course = {
     title: string;
     description: string;
     image: string;
-    price: string;
+    currency?: string;
+    amount: string;
     category: string;
-    deliveryMode: DeliveryMode;
+    deliveryMode: "Online" | "In-person" | "Hybrid";
 };
 
 export type FilterOption = {

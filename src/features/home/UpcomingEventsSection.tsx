@@ -45,64 +45,64 @@ const events = [
 export default function UpcomingEventsSection() {
     return (
         <section className="px-4 py-16 sm:px-6 lg:px-8">
-        <div
-            className="
-            mx-auto
-            max-w-[1880px]
-            rounded-[32px]
-            bg-[var(--color-blue-light)]
-            px-6
-            py-14
-            sm:px-10
-            lg:px-16
-            "
-        >
-            <div className="mx-auto max-w-[1200px]">
-            {/* Heading */}
-            <div className="flex items-end justify-between gap-6">
-                <div>
-                <h2 className="text-[38px] font-bold text-[var(--color-grey-strong)]">
-                    Upcoming{" "}
-                    <span className="text-[var(--color-blue-vibrant)]">
-                    Events
-                    </span>
-                    <span className="text-[var(--color-red-dark)]">.</span>
-                </h2>
-
-                <p className="mt-2 text-[16px] text-[var(--color-grey-strong)] font-medium">
-                    Education Events - Reserve your spot and start learning in an
-                    interactive and engaging way
-                </p>
-                </div>
-
-                <Link
-                href="/events"
+            <div
                 className="
-                    hidden
-                    items-center
-                    gap-2
-                    text-[13px]
-                    font-medium
-                    text-[var(--color-blue-dark)]
-                    md:flex
+                mx-auto
+                max-w-[1880px]
+                rounded-[32px]
+                bg-[var(--color-blue-light)]
+                px-6
+                py-14
+                sm:px-10
+                lg:px-16
                 "
-                >
-                All Events
-                <ChevronRight size={17} strokeWidth={2} />
-                </Link>
-            </div>
+            >
+                <div className="mx-auto max-w-[1200px]">
+                    {/* Heading */}
+                    <div className="flex items-end justify-between gap-6">
+                        <div>
+                            <h2 className="text-[38px] font-bold text-[var(--color-grey-strong)]">
+                                Upcoming{" "}
+                                <span className="text-[var(--color-blue-vibrant)]">
+                                Events
+                                </span>
+                                <span className="text-[var(--color-red-dark)]">.</span>
+                            </h2>
 
-            {/* Events */}
-            <div className="mt-8 space-y-5">
-                {events.map((event) => (
-                <EventCard
-                    key={`${event.month}-${event.day}-${event.title}`}
-                    {...event}
-                />
-                ))}
+                            <p className="mt-2 text-[16px] text-[var(--color-grey-strong)] font-medium">
+                                Education Events - Reserve your spot and start learning in an
+                                interactive and engaging way
+                            </p>
+                        </div>
+
+                        <Link
+                            href="/events"
+                            className="
+                                hidden
+                                items-center
+                                gap-2
+                                text-[13px]
+                                font-medium
+                                text-[var(--color-blue-dark)]
+                                md:flex
+                            "
+                        >
+                            All Events
+                            <ChevronRight size={17} strokeWidth={2} />
+                        </Link>
+                    </div>
+
+                    {/* Events */}
+                    <div className="mt-8 space-y-5">
+                        {events.map((event) => (
+                        <EventCard
+                            key={`${event.month}-${event.day}-${event.title}`}
+                            {...event}
+                        />
+                        ))}
+                    </div>
+                </div>
             </div>
-            </div>
-        </div>
         </section>
     );
 }
