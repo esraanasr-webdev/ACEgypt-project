@@ -121,7 +121,7 @@ export default function LearningJourneySection() {
                         <div
                             className="
                                 absolute
-                                right-[50px]
+                                right-[0px]
                                 top-[10px]
                                 z-20
                                 hidden

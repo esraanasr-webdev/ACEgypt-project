@@ -57,19 +57,28 @@ export default function MainNavigation({
                 <MainNavigationItem
                     label="Home"
                     active
+                    href="/"
                 />
 
                 <MainNavigationItem
                     label="About"
+                    href="/about"
                 />
 
                 <MainNavigationItem
                     label="Courses"
                     hasDropdown
+                    href="/courses"
                 />
 
-                <MainNavigationItem label="Careers" />
-                <MainNavigationItem label="Contact" />
+                <MainNavigationItem
+                    label="Careers"
+                    href="/careers"
+                />
+                <MainNavigationItem
+                    label="Contact"
+                    href="/contact"
+                />
             </div>
             )}
 
@@ -98,7 +107,7 @@ export default function MainNavigation({
                         type="button"
                         className="rounded-xl px-4 py-3 text-sm font-medium leading-[1.25] text-white"
                     >
-                        Sign in
+                    Login
                     </button>
 
                     <Button variant="secondary" size="small" >
