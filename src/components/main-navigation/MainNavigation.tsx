@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "../logo/Logo";
-import Button from "../ui/Button";
 import MainNavigationItem from "./MainNavigationItem";
 
 type MainNavigationProps = {
@@ -101,20 +100,32 @@ export default function MainNavigation({
                 </div>
             {/* Guest */}
             {isGuest && (
-                <>
                 <div className="flex items-center">
-                    <button
-                        type="button"
+                    <Link
+                        href="/login"
                         className="rounded-xl px-4 py-3 text-sm font-medium leading-[1.25] text-white"
                     >
-                    Login
-                    </button>
+                        Sign In
+                    </Link>
 
-                    <Button variant="secondary" size="small" >
+                    <Link
+                        href="/signup"
+                        className="
+                            inline-flex
+                            min-h-[36px]
+                            items-center
+                            justify-center
+                            rounded-[10px]
+                            bg-white
+                            px-4
+                            text-[12px]
+                            font-medium
+                            text-[var(--color-blue-dark)]
+                        "
+                    >
                         Sign Up
-                    </Button>
+                    </Link>
                 </div>
-                </>
             )}
 
             {/* Logged in */}
