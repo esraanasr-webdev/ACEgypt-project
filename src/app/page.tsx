@@ -1,14 +1,14 @@
-import BecomeTeacherBanner from "../components/become-teacher-banner/BecomeTeacherBanner";
-import Footer from "../components/footer/Footer";
-import AboutPartners from "../features/about/AboutPartners";
-import GallerySection from "../features/home/GallerySection";
-import HeroSection from "../features/home/HeroSection";
-import InteractiveLearningSection from "../features/home/InteractiveLearningSection";
-import LearningJourneySection from "../features/home/LearningJourneySection";
-import PopularCoursesSlider from "../features/home/PopularCoursesSlider";
-import SuccessStoriesSection from "../features/home/SuccessStoriesSection";
-import TeachingCoursesSection from "../features/home/TeachingCoursesSection";
-import UpcomingEventsSection from "../features/home/UpcomingEventsSection";
+import AboutPartners from "@//features/about/AboutPartners";
+import GallerySection from "@//features/home/GallerySection";
+import HeroSection from "@//features/home/HeroSection";
+import InteractiveLearningSection from "@//features/home/InteractiveLearningSection";
+import LearningJourneySection from "@//features/home/LearningJourneySection";
+import PopularCoursesSlider from "@//features/home/PopularCoursesSlider";
+import SuccessStoriesSection from "@//features/home/SuccessStoriesSection";
+import TeachingCoursesSection from "@//features/home/TeachingCoursesSection";
+import UpcomingEventsSection from "@//features/home/UpcomingEventsSection";
+import BecomeTeacherBanner from "@/components/become-teacher-banner/BecomeTeacherBanner";
+import Footer from "@/components/footer/Footer";
 
 export default function HomePage() {
   return (
