@@ -1,6 +1,6 @@
-import BecomeTeacherBanner from "../../../components/become-teacher-banner/BecomeTeacherBanner";
+import BecomeTeacherBanner from "@/components/become-teacher-banner/BecomeTeacherBanner";
 
-import CoursesContent from "../../../features/courses/CoursesContent";
+import CoursesContent from "@/features/courses/CoursesContent";
 
 export default function CoursesPage() {
     return (

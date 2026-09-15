@@ -1,5 +1,4 @@
-import { ChevronRight } from "lucide-react";
-import Link from "next/link";
+import Breadcrumbs from "@/components/ui/Breadcrumbs";
 
 type BreadcrumbItem = {
     label: string;
@@ -9,12 +8,14 @@ type BreadcrumbItem = {
 type PageHeaderProps = {
     title: string;
     breadcrumbs: BreadcrumbItem[];
+    description?: string;
 };
 
 export default function PageHeader({
     title,
     breadcrumbs,
-    }: PageHeaderProps) {
+    description,
+}: PageHeaderProps) {
     return (
         <section
             className="
@@ -27,52 +28,36 @@ export default function PageHeader({
             "
         >
             <div className="mx-auto max-w-[1200px]">
-                <nav
-                    aria-label="Breadcrumb"
-                    className="flex items-center gap-1 text-[16px] font-normal"
-                >
-                {breadcrumbs.map((item, index) => {
-                    const isLast = index === breadcrumbs.length - 1;
+                <Breadcrumbs
+                    items={breadcrumbs}
+                />
 
-                    return (
-                    <div
-                        key={`${item.label}-${index}`}
-                        className="flex items-center gap-1"
+                <div className="py-8 text-center">
+                    <h1
+                        className="
+                            text-[38px]
+                            font-semibold
+                            leading-[1.25]
+                            md:text-[48px]
+                        "
                     >
-                        {item.href && !isLast ? (
-                        <Link
-                            href={item.href}
-                            className="transition-opacity hover:opacity-80"
+                        {title}
+                    </h1>
+
+                    {description && (
+                        <p
+                            className="
+                                mt-4
+                                text-[16px]
+                                font-normal
+                                leading-[1.5]
+                                md:text-[18px]
+                            "
                         >
-                            {item.label}
-                        </Link>
-                        ) : (
-                        <span className="font-medium">{item.label}</span>
-                        )}
-
-                        {!isLast && (
-                        <ChevronRight
-                            size={12}
-                            strokeWidth={1.75}
-                            aria-hidden="true"
-                        />
-                        )}
-                    </div>
-                    );
-                })}
-                </nav>
-
-                <h1
-                    className="
-                        mt-8
-                        text-center
-                        text-[48px]
-                        font-semibold
-                        leading-[1.5]
-                    "
-                >
-                {title}
-                </h1>
+                            {description}
+                        </p>
+                    )}
+                </div>
             </div>
         </section>
     );

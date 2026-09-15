@@ -15,6 +15,7 @@ type TextInputProps = {
     hint?: string;
     type?: "text" | "email" | "password" | "tel";
     name?: string;
+    required?: boolean;
 };
 
 export default function TextInput({
@@ -27,83 +28,91 @@ export default function TextInput({
     hint,
     type = "text",
     name,
+    required = false,
     }: TextInputProps) {
     const isError = status === "error";
     const isSuccess = status === "success";
 
     return (
         <div className="w-full mb-[24px]">
-        <label className="mb-2 block text-[16px] font-semibold leading-[1.25] text-[var(--color-grey-strong)]">
-            {label}
-        </label>
+            <label className="mb-2 block text-[16px] font-semibold leading-[1.25] text-[var(--color-grey-strong)]">
+                {label}
 
-        <input
-            type={type}
-            name={name}
-            value={value}
-            placeholder={placeholder}
-            disabled={disabled}
-            onChange={(event) => onChange?.(event.target.value)}
-            className={`
-            h-[42px]
-            w-full
-            rounded-[10px]
-            border
-            bg-white
-            px-3
-            text-[12px]
-            font-normal
-            text-[var(--color-grey-strong)]
-            outline-none
-            transition-colors
-            duration-150
+                {required && (
+                    <span className="ml-1 text-[var(--color-red-dark)]">
+                        *
+                    </span>
+                )}
+            </label>
 
-            placeholder:text-[var(--color-grey-dark)]
+            <input
+                type={type}
+                name={name}
+                value={value}
+                required={required}
+                placeholder={placeholder}
+                disabled={disabled}
+                onChange={(event) => onChange?.(event.target.value)}
+                className={`
+                h-[42px]
+                w-full
+                rounded-[10px]
+                border
+                bg-white
+                px-3
+                text-[12px]
+                font-normal
+                text-[var(--color-grey-strong)]
+                outline-none
+                transition-colors
+                duration-150
 
-            ${
-                isError
-                ? "border-[var(--color-red-dark)] focus:border-[var(--color-red-dark)]"
-                : isSuccess
-                    ? "border-[var(--color-green-dark)] focus:border-[var(--color-green-dark)]"
-                    : "border-transparent focus:border-[var(--color-blue-vibrant)]"
-            }
+                placeholder:text-[var(--color-grey-dark)]
 
-            ${
-                disabled
-                ? "cursor-not-allowed bg-[var(--color-grey-light)] text-[var(--color-grey-disable)] placeholder:text-[var(--color-grey-disable)]"
-                : ""
-            }
-            `}
-        />
-
-        {hint && (isError || isSuccess) && (
-            <div
-            className={`
-                mt-2 flex items-center gap-1 text-[10px]
                 ${
-                isError
-                    ? "text-[var(--color-red-dark)]"
-                    : "text-[var(--color-green-dark)]"
+                    isError
+                    ? "border-[var(--color-red-dark)] focus:border-[var(--color-red-dark)]"
+                    : isSuccess
+                        ? "border-[var(--color-green-dark)] focus:border-[var(--color-green-dark)]"
+                        : "border-transparent focus:border-[var(--color-blue-vibrant)]"
                 }
-            `}
-            >
-            {isError ? (
-                <CircleAlert
-                size={13}
-                strokeWidth={2}
-                fill="currentColor"
-                />
-            ) : (
-                <CheckCircle2
-                size={13}
-                strokeWidth={2}
-                fill="currentColor"
-                />
-            )}
 
-            <span>{hint}</span>
-            </div>
-        )}
+                ${
+                    disabled
+                    ? "cursor-not-allowed bg-[var(--color-grey-light)] text-[var(--color-grey-disable)] placeholder:text-[var(--color-grey-disable)]"
+                    : ""
+                }
+                `}
+            />
+
+            {hint && (isError || isSuccess) && (
+                <div
+                className={`
+                    mt-2 flex items-center gap-1 text-[10px]
+                    ${
+                    isError
+                        ? "text-[var(--color-red-dark)]"
+                        : "text-[var(--color-green-dark)]"
+                    }
+                `}
+                >
+                {isError ? (
+                    <CircleAlert
+                    size={13}
+                    strokeWidth={2}
+                    fill="currentColor"
+                    />
+                ) : (
+                    <CheckCircle2
+                    size={13}
+                    strokeWidth={2}
+                    fill="currentColor"
+                    />
+                )}
+
+                <span>{hint}</span>
+                </div>
+            )}
         </div>
     );
 }

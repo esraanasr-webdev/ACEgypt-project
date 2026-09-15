@@ -26,29 +26,19 @@ export default function Breadcrumbs({
                 >
                 {item.href && !isLast ? (
                     <Link
-                    href={item.href}
-                    className="
-                        text-[14px]
-                        font-normal
-                        text-[var(--color-grey-dark)]
-                        transition-colors
-                        hover:text-[var(--color-blue-vibrant)]
-                    "
+                        href={item.href}
+                        className="
+                            text-[16px]
+                            font-normal
+                            transition-colors
+                            hover:text-[var(--color-blue-medium)]
+                        "
                     >
                     {item.label}
                     </Link>
                 ) : (
-                    <span
-                    className={`
-                        text-[14px]
-                        ${
-                        isLast
-                            ? "font-medium text-[var(--color-grey-strong)]"
-                            : "font-normal text-[var(--color-grey-dark)]"
-                        }
-                    `}
-                    >
-                    {item.label}
+                    <span>
+                        {item.label}
                     </span>
                 )}
 

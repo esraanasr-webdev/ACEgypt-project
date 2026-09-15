@@ -27,7 +27,7 @@ export default function CoursesHero({
         >
         <div className="mx-auto max-w-[1200px]">
             {/* Breadcrumb */}
-            <div className="text-[12px]">
+            <div className="text-[16px]">
             <Link href="/" className="hover:opacity-80">
                 Home
             </Link>
