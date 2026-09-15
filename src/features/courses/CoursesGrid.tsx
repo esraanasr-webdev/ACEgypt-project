@@ -37,7 +37,8 @@ export default function CoursesGrid({
                 badge={course.deliveryMode}
                 title={course.title}
                 description={course.description}
-                price={course.price}
+                currency={course.currency}
+                amount={course.amount}
                 actionText={course.category}
                 variant="compact"
             />
