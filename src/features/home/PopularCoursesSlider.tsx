@@ -15,7 +15,7 @@ export default function PopularCoursesSlider() {
     const popularCourses = courses.slice(0, 8);
 
     return (
-        <section className="mx-auto max-w-[1200px] py-20 px-[14px] pt-[10px]">
+        <section className="mx-auto max-w-[1200px] py-20 px-[14px] pt-[80px]">
         {/* Heading */}
         <div className="flex items-end justify-between gap-6">
             <div>

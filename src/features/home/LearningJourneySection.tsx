@@ -9,7 +9,7 @@ import TextInput from "../../components/ui/TextInput";
 
 export default function LearningJourneySection() {
     return (
-        <section className="overflow-hidden py-20">
+        <section className="overflow-hidden pb-20">
             <div className="mx-auto max-w-[1200px] px-4 sm:px-6">
                 {/* Heading */}
                 <div className="max-w-[760px]">
