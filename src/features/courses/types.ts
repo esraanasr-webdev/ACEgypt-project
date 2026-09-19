@@ -6,6 +6,7 @@ export type DeliveryMode =
 
 export type Course = {
     id: number;
+    slug: string;
     title: string;
     description: string;
     image: string;

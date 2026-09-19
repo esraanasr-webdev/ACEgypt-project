@@ -1,18 +1,9 @@
 import BecomeTeacherBanner from "../../../components/become-teacher-banner/BecomeTeacherBanner";
 import CareerApplicationForm from "../../../components/features/careers/CareerApplicationForm";
-import PageHeader from "../../../components/page-header/PageHeader";
 
 export default function CareersPage() {
     return (
         <>
-            <PageHeader
-                title="Careers"
-                breadcrumbs={[
-                { label: "Home", href: "/" },
-                { label: "Careers" },
-                ]}
-            />
-
             <section className="mx-auto max-w-[1200px] px-6 py-12">
                 <div className="text-center">
                 <h2 className="text-[48px] font-semibold text-[var(--color-grey-strong)]">

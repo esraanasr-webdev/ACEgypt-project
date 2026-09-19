@@ -1,5 +1,8 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Logo from "../logo/Logo";
 import MainNavigationItem from "./MainNavigationItem";
 
@@ -23,15 +26,25 @@ export default function MainNavigation({
     userName = "Ahmed",
     userImage = "/images/navigation/profile.png",
     }: MainNavigationProps) {
+    const pathname = usePathname();
+
     const isDashboard = loggedIn && dashboard;
     const isLoggedIn = loggedIn && !dashboard;
     const isGuest = !loggedIn && !dashboard;
 
+    const isActive = (href: string) => {
+        if (href === "/") {
+            return pathname === "/";
+        }
+
+        return pathname === href || pathname.startsWith(`${href}/`);
+    };
+
     return (
         <nav
-        className={`relative flex w-full items-center ${
-            isDashboard ? "justify-end" : "justify-between"
-        } ${className}`}
+            className={`relative flex w-full items-center ${
+                isDashboard ? "justify-end" : "justify-between"
+            } ${className}`}
         >
         {/* Logo */}
         {!isDashboard && (
@@ -55,27 +68,31 @@ export default function MainNavigation({
             <div className="flex items-center">
                 <MainNavigationItem
                     label="Home"
-                    active
+                    active={isActive("/")}
                     href="/"
                 />
 
                 <MainNavigationItem
-                    label="About"
+                    label="About Us"
+                    active={isActive("/about")}
                     href="/about"
                 />
 
                 <MainNavigationItem
                     label="Courses"
+                    active={isActive("/courses")}
                     hasDropdown
                     href="/courses"
                 />
 
                 <MainNavigationItem
                     label="Careers"
+                    active={isActive("/careers")}
                     href="/careers"
                 />
                 <MainNavigationItem
                     label="Contact"
+                    active={isActive("/contact")}
                     href="/contact"
                 />
             </div>
@@ -190,7 +207,7 @@ export default function MainNavigation({
                         />
 
                         <span className="whitespace-nowrap text-sm font-medium leading-[1.25] text-[#2b2b2b]">
-                        Hi, Ahmed
+                        Hi, {userName}
                         </span>
 
                         <Image

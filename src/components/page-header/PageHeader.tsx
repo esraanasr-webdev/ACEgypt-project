@@ -21,9 +21,7 @@ export default function PageHeader({
             className="
                 rounded-b-[28px]
                 bg-[var(--color-blue-dark)]
-                px-6
-                pb-10
-                pt-4
+                pt-20
                 text-white
             "
         >

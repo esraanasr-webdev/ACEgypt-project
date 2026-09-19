@@ -71,61 +71,61 @@ function toggleValue(
 
     return (
         <>
-        <CoursesHero
-            search={search}
-            onSearchChange={setSearch}
-        />
-
-        <section className="mx-auto max-w-[1200px] px-6 py-12">
-            <div
-            className="
-                grid
-                grid-cols-1
-                gap-10
-                lg:grid-cols-[220px_1fr]
-            "
-            >
-            <CoursesFilters
-                categories={categories}
-                levels={levels}
-                deliveryModes={deliveryModes}
-                onCategoryChange={(value) =>
-                setCategories((current) =>
-                    toggleValue(current, value)
-                )
-                }
-                onLevelChange={(value) =>
-                setLevels((current) =>
-                    toggleValue(current, value)
-                )
-                }
-                onDeliveryChange={(value) =>
-                setDeliveryModes((current) =>
-                    toggleValue(current, value)
-                )
-                }
+            <CoursesHero
+                search={search}
+                onSearchChange={setSearch}
             />
 
-            <div>
-                <CoursesToolbar
-                    showing={filteredCourses.length}
-                    total={55}
-                    sort={sort}
-                    onSortChange={setSort}
-                />
-                
-                <CoursesGrid courses={filteredCourses} />
+            <section className="mx-auto max-w-[1200px] px-6 py-12">
+                <div
+                    className="
+                        grid
+                        grid-cols-1
+                        gap-10
+                        lg:grid-cols-[220px_1fr]
+                    "
+                    >
+                    <CoursesFilters
+                        categories={categories}
+                        levels={levels}
+                        deliveryModes={deliveryModes}
+                        onCategoryChange={(value) =>
+                        setCategories((current) =>
+                            toggleValue(current, value)
+                        )
+                        }
+                        onLevelChange={(value) =>
+                        setLevels((current) =>
+                            toggleValue(current, value)
+                        )
+                        }
+                        onDeliveryChange={(value) =>
+                        setDeliveryModes((current) =>
+                            toggleValue(current, value)
+                        )
+                        }
+                    />
 
-                <div className="mt-12 flex justify-center">
-                <Pagination
-                    currentPage={page}
-                    totalPages={3}
-                    onPageChange={setPage}
-                />
+                    <div>
+                        <CoursesToolbar
+                            showing={filteredCourses.length}
+                            total={55}
+                            sort={sort}
+                            onSortChange={setSort}
+                        />
+                        
+                        <CoursesGrid courses={filteredCourses} />
+
+                        <div className="mt-12 flex justify-center">
+                            <Pagination
+                                currentPage={page}
+                                totalPages={3}
+                                onPageChange={setPage}
+                            />
+                        </div>
+                    </div>
                 </div>
-            </div>
-            </div>
-        </section>
+            </section>
         </>
     );
 }

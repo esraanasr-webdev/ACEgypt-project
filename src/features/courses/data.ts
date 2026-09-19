@@ -3,6 +3,7 @@ import type { Course, CourseDetails, FilterOption, } from "./types";
 export const courses: Course[] = [
     {
         id: 1,
+        slug: "tefl-certification",
         title: "How to teach IELTS",
         description:
         "This course is designed for ELT professionals who want to master IELTS teaching.",
@@ -14,6 +15,7 @@ export const courses: Course[] = [
     },
     {
         id: 2,
+        slug: "ielts-preparation",
         title: "TKT (Teaching Knowledge Test)",
         description:
         "TKT is a series of modular teaching qualifications which test your teaching knowledge.",
@@ -25,6 +27,7 @@ export const courses: Course[] = [
     },
     {
         id: 3,
+        slug: "ielts-preparation",
         title: "ESL Demo Mastery Course",
         description:
         "The ESL Demo Mastery Course at American Council Egypt is designed for teachers.",
@@ -35,6 +38,7 @@ export const courses: Course[] = [
     },
     {
         id: 4,
+        slug: "ielts-preparation",
         title: "How to teach IELTS",
         description:
         "This course is designed for ELT professionals who want to master IELTS teaching.",
@@ -46,6 +50,7 @@ export const courses: Course[] = [
     },
     {
         id: 5,
+        slug: "ielts-preparation",
         title: "Kids Summer Program: Ages 4 – 15",
         description:
         "This winter, ignite your child’s potential with our engaging English program.",
@@ -57,6 +62,7 @@ export const courses: Course[] = [
     },
     {
         id: 6,
+        slug: "ielts-preparation",
         title: "Youth Program: Ages 12 – 15",
         description:
         "Give your son or daughter the opportunity to improve their English.",

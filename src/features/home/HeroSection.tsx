@@ -15,7 +15,6 @@ export default function HeroSection() {
                     rounded-[36px]
                     bg-[var(--color-blue-dark)]
                     text-white
-
                 "
             >
                 {/* Background image */}
@@ -33,7 +32,7 @@ export default function HeroSection() {
 
                 <div className="relative z-10 mx-auto max-w-[1200px]">
                     {/* Navigation */}
-                    <div className="pt-5">
+                    <div className="pt-5 sm:px-4">
                         <MainNavigation />
                     </div>
 
@@ -45,6 +44,7 @@ export default function HeroSection() {
                         items-center
                         gap-10
                         lg:grid-cols-[1fr_1fr]
+                        sm:pl-4
                     "
                     >
                     {/* Left */}
@@ -93,6 +93,12 @@ export default function HeroSection() {
                                 text-[16px]
                                 font-medium
                                 text-[var(--color-blue-dark)]
+
+                                transition-colors
+                                duration-200
+
+                                hover:bg-[var(--color-blue-light)]
+                                active:bg-[var(--color-blue-light)]
                                 "
                             >
                                 Browse Courses
@@ -113,6 +119,12 @@ export default function HeroSection() {
                                 text-[16px]
                                 font-medium
                                 text-white
+
+                                transition-colors
+                                duration-200
+
+                                hover:bg-white/10
+                                active:bg-white/20
                                 "
                             >
                                 Sign Up
