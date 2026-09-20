@@ -1,6 +1,6 @@
-import BecomeTeacherBanner from "../../../components/become-teacher-banner/BecomeTeacherBanner";
-import PageHeader from "../../../components/page-header/PageHeader";
-import PrivacyContent from "../../../components/privacy/PrivacyContent";
+import BecomeTeacherBanner from "@/components/become-teacher-banner/BecomeTeacherBanner";
+import PageHeader from "@/components/page-header/PageHeader";
+import PrivacyContent from "@/components/privacy/PrivacyContent";
 
 export default function PrivacyPage() {
     return (

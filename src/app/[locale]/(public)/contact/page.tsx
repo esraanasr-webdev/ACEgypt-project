@@ -1,8 +1,8 @@
-import BecomeTeacherBanner from "../../../components/become-teacher-banner/BecomeTeacherBanner";
+import BecomeTeacherBanner from "@/components/become-teacher-banner/BecomeTeacherBanner";
 
-import BranchMapCard from "../../../features/contact/BranchMapCard";
-import ContactForm from "../../../features/contact/ContactForm";
-import ContactInfoGrid from "../../../features/contact/ContactInfoGrid";
+import BranchMapCard from "@/features/contact/BranchMapCard";
+import ContactForm from "@/features/contact/ContactForm";
+import ContactInfoGrid from "@/features/contact/ContactInfoGrid";
 
 export default function ContactPage() {
     return (

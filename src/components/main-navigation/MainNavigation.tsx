@@ -1,8 +1,12 @@
 "use client"
 
+import {
+    Link,
+    usePathname,
+    useRouter,
+} from "@/i18n/navigation";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import Logo from "../logo/Logo";
 import MainNavigationItem from "./MainNavigationItem";
 
@@ -17,7 +21,8 @@ type MainNavigationProps = {
 const bellIcon = "/images/navigation/bell.svg";
 const downIcon = "/images/navigation/down.svg";
 const profileImage = "/images/navigation/profile.png";
-const languageIcon = "/images/navigation/language.png";
+const arabicLanguageIcon = "/images/navigation/language-ar.png";
+const englishLanguageIcon = "/images/navigation/language-en.png";
 
 export default function MainNavigation({
     loggedIn = false,
@@ -27,6 +32,24 @@ export default function MainNavigation({
     userImage = "/images/navigation/profile.png",
     }: MainNavigationProps) {
     const pathname = usePathname();
+
+    /* For Translation */
+    const locale = useLocale();
+    const t = useTranslations("Navigation");
+
+    const languageIcon =
+    locale === "en"
+        ? arabicLanguageIcon
+        : englishLanguageIcon;
+    const router = useRouter();
+
+    const switchLanguage = () => {
+        const nextLocale = locale === "en" ? "ar" : "en";
+
+        router.replace(pathname, {
+            locale: nextLocale,
+        });
+    };
 
     const isDashboard = loggedIn && dashboard;
     const isLoggedIn = loggedIn && !dashboard;
@@ -67,31 +90,31 @@ export default function MainNavigation({
             {!isDashboard && (
             <div className="flex items-center">
                 <MainNavigationItem
-                    label="Home"
+                    label={t("home")}
                     active={isActive("/")}
                     href="/"
                 />
 
                 <MainNavigationItem
-                    label="About Us"
+                    label={t("about")}
                     active={isActive("/about")}
                     href="/about"
                 />
 
                 <MainNavigationItem
-                    label="Courses"
+                    label={t("courses")}
                     active={isActive("/courses")}
                     hasDropdown
                     href="/courses"
                 />
 
                 <MainNavigationItem
-                    label="Careers"
+                    label={t("careers")}
                     active={isActive("/careers")}
                     href="/careers"
                 />
                 <MainNavigationItem
-                    label="Contact"
+                    label={t("contact")}
                     active={isActive("/contact")}
                     href="/contact"
                 />
@@ -100,12 +123,24 @@ export default function MainNavigation({
 
             {/* Actions */}
             <div className="flex items-center gap-4">
-                <Image
-                    src={languageIcon}
-                    alt="Switch Language"
-                    width={30}
-                    height={30}
-                />
+                <button
+                    type="button"
+                    onClick={switchLanguage}
+                    aria-label={
+                        locale === "en"
+                            ? "Switch to Arabic"
+                            : "Switch to English"
+                    }
+                    title={locale === "en" ? "العربية" : "English"}
+                    className="flex items-center justify-center"
+                >
+                    <Image
+                        src={languageIcon}
+                        alt=""
+                        width={28}
+                        height={28}
+                    />
+                </button>
                 {/* Gradient Divider*/}
                 <div className="relative h-[29px] w-[2px] shrink-0">
                     <Image
@@ -148,24 +183,24 @@ export default function MainNavigation({
             {/* Logged in */}
             {isLoggedIn && (
                 <div className="flex w-[158px] items-center gap-2 rounded-xl bg-white px-3 py-2">
-                <Image
-                    src={profileImage}
-                    alt=""
-                    width={34}
-                    height={34}
-                    className="rounded-full"
-                />
+                    <Image
+                        src={userImage}
+                        alt=""
+                        width={34}
+                        height={34}
+                        className="rounded-full"
+                    />
 
-                <span className="whitespace-nowrap text-sm font-medium leading-[1.25] text-[#2b2b2b]">
-                    Hi, {userName}
-                </span>
+                    <span className="whitespace-nowrap text-sm font-medium leading-[1.25] text-[#2b2b2b]">
+                        Hi, {userName}
+                    </span>
 
-                <Image
-                    src={downIcon}
-                    alt=""
-                    width={16}
-                    height={16}
-                />
+                    <Image
+                        src={downIcon}
+                        alt=""
+                        width={16}
+                        height={16}
+                    />
                 </div>
             )}
 

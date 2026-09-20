@@ -1,0 +1,65 @@
+{
+    "Navigation": {
+        "home": "الرئيسية",
+        "about": "من نحن",
+        "courses": "الدورات",
+        "careers": "الوظائف",
+        "contact": "تواصل معنا",
+        "signIn": "تسجيل الدخول",
+        "signUp": "إنشاء حساب",
+        "hi": "مرحباً",
+        "switchToArabic": "التبديل إلى العربية",
+        "switchToEnglish": "التبديل إلى الإنجليزية"
+    },
+    "PageHeader": {
+        "home": "الرئيسية",
+
+        "about": {
+        "title": "من نحن"
+        },
+
+        "courses": {
+        "title": "استكشف دوراتنا",
+        "breadcrumb": "الدورات",
+        "description": "تعلّم بلا حدود، وإمكانيات أكثر"
+        },
+
+        "careers": {
+        "title": "الوظائف"
+        },
+
+        "contact": {
+        "title": "تواصل معنا"
+        },
+
+        "blog": {
+        "title": "المدونة"
+        },
+
+        "policy": {
+        "title": "سياسة الخصوصية"
+        },
+
+        "terms": {
+        "title": "الشروط والأحكام"
+        }
+    },
+    "Footer": {
+        "contact": "تواصل معنا",
+        "address": "فيلا 25 شارع كامبيز، الدقي، القاهرة، مصر",
+
+        "aboutCenter": "عن المركز",
+        "about": "من نحن",
+        "blog": "المدونة",
+        "contactLink": "تواصل معنا",
+
+        "otherLinks": "روابط أخرى",
+        "exploreCourses": "استكشف الدورات",
+        "upcomingEvents": "الفعاليات القادمة",
+        "ourGallery": "معرض الصور",
+
+        "copyright": "© 2026 المجلس الأمريكي مصر. جميع الحقوق محفوظة.",
+        "privacyPolicy": "سياسة الخصوصية",
+        "termsConditions": "الشروط والأحكام"
+    }
+}

@@ -1,6 +1,6 @@
+import Footer from "@/components/footer/Footer";
+import MainNavigation from "@/components/main-navigation/MainNavigation";
 import DynamicPageHeader from "@/components/page-header/DynamicPageHeader";
-import Footer from "../../components/footer/Footer";
-import MainNavigation from "../../components/main-navigation/MainNavigation";
 
 export default function PublicLayout({
     children,

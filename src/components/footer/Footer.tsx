@@ -1,10 +1,13 @@
+"use client";
+
+import { Link } from "@/i18n/navigation";
 import {
     Mail,
     MapPin,
     Phone,
     Smartphone,
 } from "lucide-react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 import {
     FaFacebookF,
     FaInstagram,
@@ -15,6 +18,8 @@ import {
 import Logo from "../logo/Logo";
 
 export default function Footer() {
+    const t = useTranslations("Footer");
+
     return (
         <footer className="bg-white px-8 pt-20 pb-6">
             {/* Gradient dashed divider */}
@@ -39,15 +44,15 @@ export default function Footer() {
 
                     <div className="mt-5 flex items-center gap-2">
                         <Link
-                        href="#"
-                        aria-label="Facebook"
-                        className="
-                            flex h-[28px] w-[28px]
-                            items-center justify-center
-                            rounded-full
-                            bg-[var(--color-blue-vibrant)]
-                            text-white
-                        "
+                            href="#"
+                            aria-label="Facebook"
+                            className="
+                                flex h-[28px] w-[28px]
+                                items-center justify-center
+                                rounded-full
+                                bg-[var(--color-blue-vibrant)]
+                                text-white
+                            "
                         >
                         <FaFacebookF size={16} />
                         </Link>
@@ -80,7 +85,7 @@ export default function Footer() {
                 {/* Contact */}
                 <div>
                     <h3 className="mb-6 text-[16px] font-semibold text-[var(--color-grey-strong)]">
-                    Contact
+                        {t("contact")}
                     </h3>
 
                     <div className="flex flex-col gap-4 text-[14px] text-[var(--color-grey-strong)]">
@@ -112,7 +117,7 @@ export default function Footer() {
                         />
 
                         <span>
-                        Villa 25 Kambiz street, Dokki, Cairo, Egypt
+                            {t("address")}
                         </span>
                     </div>
 
@@ -136,42 +141,42 @@ export default function Footer() {
                 {/* About Center */}
                 <div>
                     <h3 className="mb-6 text-[16px] font-semibold text-[var(--color-grey-strong)]">
-                    About Center
+                        {t("aboutCenter")}
                     </h3>
 
                     <nav className="flex flex-col gap-4 text-[14px] text-[var(--color-grey-strong)]">
-                    <Link href="/about" className="hover:underline">
-                        About
-                    </Link>
+                        <Link href="/about" className="hover:underline">
+                            {t("about")}
+                        </Link>
 
-                    <Link href="/blog" className="hover:underline">
-                        Blog
-                    </Link>
+                        <Link href="/blog" className="hover:underline">
+                            {t("blog")}
+                        </Link>
 
-                    <Link href="/contact" className="hover:underline">
-                        Contact
-                    </Link>
+                        <Link href="/contact" className="hover:underline">
+                            {t("contactLink")}
+                        </Link>
                     </nav>
                 </div>
 
                 {/* Other Links */}
                 <div>
                     <h3 className="mb-6 text-[16px] font-semibold text-[var(--color-grey-strong)]">
-                    Other Links
+                        {t("otherLinks")}
                     </h3>
 
                     <nav className="flex flex-col gap-4 text-[14px] text-[var(--color-grey-strong)]">
-                    <Link href="/courses" className="hover:underline">
-                        Explore Courses
-                    </Link>
+                        <Link href="/courses" className="hover:underline">
+                            {t("exploreCourses")}
+                        </Link>
 
-                    <Link href="/events" className="hover:underline">
-                        Upcoming Events
-                    </Link>
+                        <Link href="/events" className="hover:underline">
+                            {t("upcomingEvents")}
+                        </Link>
 
-                    <Link href="/gallery" className="hover:underline">
-                        Our Gallery
-                    </Link>
+                        <Link href="/gallery" className="hover:underline">
+                            {t("ourGallery")}
+                        </Link>
                     </nav>
                 </div>
                 </div>
@@ -191,19 +196,19 @@ export default function Footer() {
                 >
                     <div className="flex flex-col gap-3 text-[12px] text-[var(--color-grey-strong)] sm:flex-row sm:items-center sm:justify-between">
                         <p>
-                        © 2026 American Council Egypt. All rights reserved.
+                            {t("copyright")}
                         </p>
 
                         <div className="flex items-center gap-1">
-                        <Link href="/policy" className="hover:underline">
-                            Privacy Policy
-                        </Link>
+                            <Link href="/policy" className="hover:underline">
+                                {t("privacyPolicy")}
+                            </Link>
 
-                        <span>|</span>
+                            <span>|</span>
 
-                        <Link href="/terms" className="hover:underline">
-                            Terms & Conditions
-                        </Link>
+                            <Link href="/terms" className="hover:underline">
+                                {t("termsConditions")}
+                            </Link>
                         </div>
                     </div>
                 </div>

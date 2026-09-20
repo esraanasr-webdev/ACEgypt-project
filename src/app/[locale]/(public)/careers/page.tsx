@@ -1,5 +1,5 @@
-import BecomeTeacherBanner from "../../../components/become-teacher-banner/BecomeTeacherBanner";
-import CareerApplicationForm from "../../../components/features/careers/CareerApplicationForm";
+import BecomeTeacherBanner from "@/components/become-teacher-banner/BecomeTeacherBanner";
+import CareerApplicationForm from "@/components/features/careers/CareerApplicationForm";
 
 export default function CareersPage() {
     return (

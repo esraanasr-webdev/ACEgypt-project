@@ -1,47 +1,51 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 
+import { usePathname } from "@/i18n/navigation";
 import PageHeader from "./PageHeader";
 
 type PageHeaderConfig = {
-    title: string;
-    description?: string;
+    key: string;
+    hasDescription?: boolean;
+    breadcrumbKey?: string;
 };
 
 const pageHeaders: Record<string, PageHeaderConfig> = {
     "/about": {
-        title: "About Us",
+        key: "about",
     },
 
     "/courses": {
-        title: "Explore Our Courses",
-        description: "Limitless learning, more possibilities",
+        key: "courses",
+        hasDescription: true,
+        breadcrumbKey: "courses.breadcrumb",
     },
 
     "/careers": {
-        title: "Careers",
+        key: "careers",
     },
 
     "/contact": {
-        title: "Contact Us",
+        key: "contact",
     },
 
     "/blog": {
-        title: "Blog",
+        key: "blog",
     },
 
     "/policy": {
-        title: "Privacy Policy",
+        key: "policy",
     },
 
     "/terms": {
-        title: "Terms & Conditions",
+        key: "terms",
     },
 };
 
 export default function DynamicPageHeader() {
     const pathname = usePathname();
+    const t = useTranslations("PageHeader");
 
     // Homepage has its own hero, so don't show PageHeader.
     if (pathname === "/") {
@@ -55,17 +59,25 @@ export default function DynamicPageHeader() {
         return null;
     }
 
+    const title = t(`${page.key}.title`);
+
     return (
         <PageHeader
-            title={page.title}
-            description={page.description}
+            title={title}
+            description={
+                page.hasDescription
+                    ? t(`${page.key}.description`)
+                    : undefined
+            }
             breadcrumbs={[
                 {
-                    label: "Home",
+                    label: t("home"),
                     href: "/",
                 },
                 {
-                    label: page.title,
+                    label: page.breadcrumbKey
+                        ? t(page.breadcrumbKey)
+                        : title,
                 },
             ]}
         />

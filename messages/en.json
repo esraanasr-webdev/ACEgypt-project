@@ -1,0 +1,66 @@
+{
+    "Navigation": {
+        "home": "Home",
+        "about": "About Us",
+        "courses": "Courses",
+        "careers": "Careers",
+        "contact": "Contact",
+        "signIn": "Sign In",
+        "signUp": "Sign Up",
+        "hi": "Hi",
+        "switchToArabic": "Switch to Arabic",
+        "switchToEnglish": "Switch to English"
+    },
+
+    "PageHeader": {
+        "home": "Home",
+
+        "about": {
+        "title": "About Us"
+        },
+
+        "courses": {
+        "title": "Explore Our Courses",
+        "breadcrumb": "Courses",
+        "description": "Limitless learning, more possibilities"
+        },
+
+        "careers": {
+        "title": "Careers"
+        },
+
+        "contact": {
+        "title": "Contact Us"
+        },
+
+        "blog": {
+        "title": "Blog"
+        },
+
+        "policy": {
+        "title": "Privacy Policy"
+        },
+
+        "terms": {
+        "title": "Terms & Conditions"
+        }
+    },
+    "Footer": {
+        "contact": "Contact",
+        "address": "Villa 25 Kambiz street, Dokki, Cairo, Egypt",
+
+        "aboutCenter": "About Center",
+        "about": "About",
+        "blog": "Blog",
+        "contactLink": "Contact",
+
+        "otherLinks": "Other Links",
+        "exploreCourses": "Explore Courses",
+        "upcomingEvents": "Upcoming Events",
+        "ourGallery": "Our Gallery",
+
+        "copyright": "© 2026 American Council Egypt. All rights reserved.",
+        "privacyPolicy": "Privacy Policy",
+        "termsConditions": "Terms & Conditions"
+    }
+}

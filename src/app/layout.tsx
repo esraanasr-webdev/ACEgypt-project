@@ -3,28 +3,25 @@ import { Poppins } from "next/font/google";
 import "../styles/globals.css";
 
 const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-poppins",
-  display: "swap",
+    subsets: ["latin"],
+    weight: ["300", "400", "500", "600", "700"],
+    variable: "--font-poppins",
+    display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "ACEgypt",
-  description: "American Council Egypt",
+    title: "ACEgypt",
+    description: "American Council Egypt",
 };
 
 export default function RootLayout({
     children,
-  }: Readonly<{
+}: Readonly<{
     children: React.ReactNode;
-  }>) {
-  return (
-    <html
-      lang="en"
-      className={poppins.variable}
-    >
-      <body>{children}</body>
-    </html>
-  );
+}>) {
+    return (
+        <html className={poppins.variable}>
+            <body>{children}</body>
+        </html>
+    );
 }

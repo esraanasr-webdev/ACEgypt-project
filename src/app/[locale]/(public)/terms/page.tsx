@@ -1,6 +1,6 @@
-import BecomeTeacherBanner from "../../../components/become-teacher-banner/BecomeTeacherBanner";
-import PageHeader from "../../../components/page-header/PageHeader";
-import TermsContent from "../../../components/terms/TermsContent";
+import BecomeTeacherBanner from "@/components/become-teacher-banner/BecomeTeacherBanner";
+import PageHeader from "@/components/page-header/PageHeader";
+import TermsContent from "@/components/terms/TermsContent";
 
 export default function TermsPage() {
     return (

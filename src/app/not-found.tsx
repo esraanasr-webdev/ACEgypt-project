@@ -1,27 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 
-import Footer from "../components/footer/Footer";
-import MainNavigation from "../components/main-navigation/MainNavigation";
-import PageHeader from "../components/page-header/PageHeader";
 export default function NotFound() {
     return (
         <>
-            <section className="bg-[var(--color-blue-dark)] py-8">
-                <div className="mx-auto max-w-[1200px]">
-                        <MainNavigation />
-                </div>
-            </section>
-
-            <PageHeader
-                title="404 Page Not Found"
-                breadcrumbs={[
-                    { label: "Home", href: "/" },
-                    { label: "Error Page" },
-                ]}
-            />
-
             <main className="bg-white">
-                <section className="mx-auto flex min-h-[520px] max-w-[1200px] items-center justify-center px-7 py-50">
+                <section className="mx-auto flex min-h-screen max-w-[1200px] flex-col items-center justify-center px-7 py-20">
                     <Image
                         src="/images/404-error.png"
                         alt="404 page not found"
@@ -30,9 +14,27 @@ export default function NotFound() {
                         priority
                         className="h-auto w-full max-w-[620px] object-contain"
                     />
+
+                    <Link
+                        href="/en"
+                        className="
+                            mt-8
+                            inline-flex
+                            min-h-[48px]
+                            items-center
+                            justify-center
+                            rounded-[14px]
+                            bg-[var(--color-blue-vibrant)]
+                            px-6
+                            text-[14px]
+                            font-medium
+                            text-white
+                        "
+                    >
+                        Back to Home
+                    </Link>
                 </section>
             </main>
-            <Footer  />
         </>
     );
 }
