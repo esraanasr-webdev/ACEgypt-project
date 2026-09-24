@@ -5,177 +5,322 @@ import MainNavigation from "../../components/main-navigation/MainNavigation";
 
 export default function HeroSection() {
     return (
-        <section className="px-[14px] pt-[10px]">
+        <section
+            className="
+                px-2
+                pt-2
+
+                sm:px-[14px]
+                sm:pt-[10px]
+            "
+        >
             <div
                 className="
                     relative
                     w-full
-                    min-h-[720px]
+                    min-h-[650px]
                     overflow-hidden
-                    rounded-[36px]
+                    rounded-[28px]
                     bg-[var(--color-blue-dark)]
                     text-white
+
+                    sm:min-h-[680px]
+                    sm:rounded-[32px]
+
+                    lg:min-h-[720px]
+                    lg:rounded-[36px]
                 "
             >
                 {/* Background image */}
                 <div className="absolute inset-0">
                     <Image
-                    src="/images/home/hero-bg.jpg"
-                    alt=""
-                    fill
-                    priority
-                    className="object-cover"
+                        src="/images/home/hero-bg.jpg"
+                        alt=""
+                        fill
+                        priority
+                        sizes="100vw"
+                        className="object-cover"
                     />
 
                     <div className="absolute inset-0 bg-[var(--color-blue-dark)]/90" />
                 </div>
 
-                <div className="relative z-10 mx-auto max-w-[1200px]">
+                <div
+                    className="
+                        relative
+                        z-10
+                        mx-auto
+                        w-full
+                        max-w-[1200px]
+                    "
+                >
                     {/* Navigation */}
-                    <div className="pt-5 sm:px-4">
+                    <div
+                        className="
+                            px-2
+                            pt-4
+
+                            sm:px-4
+                            sm:pt-5
+
+                            lg:pt-5
+                        "
+                    >
                         <MainNavigation />
                     </div>
 
                     <div
-                    className="
-                        grid
-                        min-h-[620px]
-                        grid-cols-1
-                        items-center
-                        gap-10
-                        lg:grid-cols-[1fr_1fr]
-                        sm:pl-4
-                    "
+                        className="
+                            grid
+                            min-h-[540px]
+                            grid-cols-1
+                            items-center
+                            gap-8
+                            px-4
+                            py-10
+
+                            sm:min-h-[570px]
+                            sm:gap-10
+                            sm:pl-4
+                            sm:pr-4
+                            sm:py-12
+
+                            lg:min-h-[620px]
+                            lg:grid-cols-[1fr_1fr]
+                            lg:px-0
+                            lg:py-0
+                            lg:pl-4
+                        "
                     >
-                    {/* Left */}
-                    <div className="w-[700px]">
-                        <p className="text-[26px] font-medium leading-[1.4]">
-                        Add{" "}
-                        <span className="relative inline-block">
-                            Value
-                            <span
+                        {/* Left */}
+                        <div
                             className="
-                                absolute
-                                -inset-x-2
-                                -inset-y-1
-                                rounded-[50%]
-                                border-2
-                                border-[var(--color-orange-dark)]
+                                w-full
+
+                                lg:w-[700px]
                             "
-                            />
-                        </span>{" "}
-                        to Your Life with
-                        </p>
-
-                        <h1 className="mt-4 text-[48px] font-bold leading-[1.2]">
-                        American Council Egypt
-                        <span className="text-[var(--color-red-dark)]">.</span>
-                        </h1>
-
-                        <p className="mt-6 max-w-[620px] text-[18px] leading-[1.8]">
-                        Experience high-quality language training that empowers you to
-                        communicate with confidence, develops real-world skills, and opens
-                        new opportunities for your future.
-                        </p>
-
-                        <div className="mt-8 flex flex-wrap gap-5">
-                            <Link
-                                href="/courses"
+                        >
+                            <p
                                 className="
-                                inline-flex
-                                min-h-[58px]
-                                min-w-[190px]
-                                items-center
-                                justify-center
-                                rounded-[14px]
-                                bg-white
-                                px-6
-                                text-[16px]
-                                font-medium
-                                text-[var(--color-blue-dark)]
+                                    text-[18px]
+                                    font-medium
+                                    leading-[1.4]
 
-                                transition-colors
-                                duration-200
+                                    sm:text-[21px]
 
-                                hover:bg-[var(--color-blue-light)]
-                                active:bg-[var(--color-blue-light)]
+                                    md:text-[23px]
+
+                                    lg:text-[26px]
                                 "
                             >
-                                Browse Courses
-                            </Link>
+                                Add{" "}
+                                <span className="relative inline-block">
+                                    Value
 
-                            <Link
-                                href="/signup"
+                                    <span
+                                        className="
+                                            absolute
+                                            -inset-x-2
+                                            -inset-y-1
+                                            rounded-[50%]
+                                            border-2
+                                            border-[var(--color-orange-dark)]
+                                        "
+                                    />
+                                </span>{" "}
+                                to Your Life with
+                            </p>
+
+                            <h1
                                 className="
-                                inline-flex
-                                min-h-[58px]
-                                min-w-[190px]
-                                items-center
-                                justify-center
-                                rounded-[14px]
-                                border
-                                border-white
-                                px-6
-                                text-[16px]
-                                font-medium
-                                text-white
+                                    mt-4
+                                    max-w-[650px]
+                                    text-[32px]
+                                    font-bold
+                                    leading-[1.2]
 
-                                transition-colors
-                                duration-200
+                                    sm:text-[38px]
 
-                                hover:bg-white/10
-                                active:bg-white/20
+                                    md:text-[42px]
+
+                                    lg:text-[48px]
                                 "
                             >
-                                Sign Up
-                            </Link>
-                        </div>
+                                American Council Egypt
+                                <span className="text-[var(--color-red-dark)]">
+                                    .
+                                </span>
+                            </h1>
 
-                        <div className="mt-7 flex items-center gap-3">
-                            <div className="flex -space-x-3">
-                                {[
-                                "/images/home/learner-1.png",
-                                "/images/home/learner-2.png",
-                                "/images/home/learner-3.png",
-                                ].map((src) => (
-                                <div
-                                    key={src}
+                            <p
+                                className="
+                                    mt-5
+                                    max-w-[620px]
+                                    text-[14px]
+                                    leading-[1.7]
+
+                                    sm:text-[16px]
+                                    sm:leading-[1.8]
+
+                                    lg:mt-6
+                                    lg:text-[18px]
+                                "
+                            >
+                                Experience high-quality language training that
+                                empowers you to communicate with confidence,
+                                develops real-world skills, and opens new
+                                opportunities for your future.
+                            </p>
+
+                            {/* Buttons */}
+                            <div
+                                className="
+                                    mt-7
+                                    flex
+                                    w-full
+                                    flex-col
+                                    gap-3
+
+                                    sm:mt-8
+                                    sm:flex-row
+                                    sm:flex-wrap
+                                    sm:gap-5
+                                "
+                            >
+                                <Link
+                                    href="/courses"
                                     className="
-                                    relative
-                                    h-[36px]
-                                    w-[36px]
-                                    overflow-hidden
-                                    rounded-full
-                                    border-2
-                                    border-[var(--color-blue-dark)]
+                                        inline-flex
+                                        min-h-[52px]
+                                        w-full
+                                        items-center
+                                        justify-center
+                                        rounded-[12px]
+                                        bg-white
+                                        px-6
+                                        text-[14px]
+                                        font-medium
+                                        text-[var(--color-blue-dark)]
+
+                                        transition-colors
+                                        duration-200
+
+                                        hover:bg-[var(--color-blue-light)]
+                                        active:bg-[var(--color-blue-light)]
+
+                                        sm:w-auto
+                                        sm:min-w-[190px]
+                                        sm:text-[16px]
+
+                                        lg:min-h-[58px]
+                                        lg:min-w-[190px]
+                                        lg:rounded-[14px]
+                                        lg:text-[16px]
                                     "
                                 >
-                                    <Image
-                                    src={src}
-                                    alt=""
-                                    fill
-                                    className="object-cover"
-                                    />
-                                </div>
-                                ))}
+                                    Browse Courses
+                                </Link>
+
+                                <Link
+                                    href="/signup"
+                                    className="
+                                        inline-flex
+                                        min-h-[52px]
+                                        w-full
+                                        items-center
+                                        justify-center
+                                        rounded-[12px]
+                                        border
+                                        border-white
+                                        px-6
+                                        text-[14px]
+                                        font-medium
+                                        text-white
+
+                                        transition-colors
+                                        duration-200
+
+                                        hover:bg-white/10
+                                        active:bg-white/20
+
+                                        sm:w-auto
+                                        sm:min-w-[190px]
+                                        sm:text-[16px]
+
+                                        lg:min-h-[58px]
+                                        lg:min-w-[190px]
+                                        lg:rounded-[14px]
+                                        lg:text-[16px]
+                                    "
+                                >
+                                    Sign Up
+                                </Link>
                             </div>
 
-                            <span className="text-[14px] font-medium">
-                                10K+ Learners
-                            </span>
+                            {/* Learners */}
+                            <div
+                                className="
+                                    mt-6
+                                    flex
+                                    items-center
+                                    gap-3
+
+                                    lg:mt-7
+                                "
+                            >
+                                <div className="flex -space-x-3">
+                                    {[
+                                        "/images/home/learner-1.png",
+                                        "/images/home/learner-2.png",
+                                        "/images/home/learner-3.png",
+                                    ].map((src) => (
+                                        <div
+                                            key={src}
+                                            className="
+                                                relative
+                                                h-[36px]
+                                                w-[36px]
+                                                overflow-hidden
+                                                rounded-full
+                                                border-2
+                                                border-[var(--color-blue-dark)]
+                                            "
+                                        >
+                                            <Image
+                                                src={src}
+                                                alt=""
+                                                fill
+                                                sizes="36px"
+                                                className="object-cover"
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <span
+                                    className="
+                                        text-[13px]
+                                        font-medium
+
+                                        sm:text-[14px]
+                                    "
+                                >
+                                    10K+ Learners
+                                </span>
+                            </div>
                         </div>
-                    </div>
 
-                        {/* Right */}
-                        <div className="
-                                    absolute
-                                    right-[-40px]
-                                    relative
-                                    hidden
-                                    h-full
-                                    lg:block"
+                        {/* Right - Desktop only */}
+                        <div
+                            className="
+                                relative
+                                hidden
+                                h-full
+
+                                lg:right-[-40px]
+                                lg:block
+                            "
                         >
-
                             {/* Circle decoration */}
                             <div
                                 className="
@@ -197,7 +342,7 @@ export default function HeroSection() {
                                     "
                                 />
 
-                                {/* Cut-out to create the curved ring */}
+                                {/* Cut-out */}
                                 <div
                                     className="
                                         absolute
@@ -234,6 +379,7 @@ export default function HeroSection() {
                                     alt="ACE student"
                                     fill
                                     priority
+                                    sizes="430px"
                                     className="object-contain object-bottom"
                                 />
                             </div>
@@ -252,7 +398,7 @@ export default function HeroSection() {
                                     alt="50K+ Learning Hours"
                                     width={266}
                                     height={138}
-                                    className="h-auto"
+                                    className="h-auto w-auto"
                                 />
                             </div>
 
@@ -270,14 +416,13 @@ export default function HeroSection() {
                                     alt="4.7 Student Satisfaction"
                                     width={287}
                                     height={138}
-                                    className="h-auto"
+                                    className="h-auto w-auto"
                                 />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-                    
         </section>
     );
 }

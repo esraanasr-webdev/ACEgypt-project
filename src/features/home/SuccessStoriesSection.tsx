@@ -188,6 +188,7 @@ export default function SuccessStoriesSection() {
                             src="/images/home/success/mohamed.png"
                             alt="Mohamed Samy"
                             fill
+                            sizes="64px"
                             className="object-cover"
                         />
                         </div>
@@ -244,6 +245,7 @@ export default function SuccessStoriesSection() {
                         src="/images/home/success/ahmed.png"
                         alt="Ahmed Hassan"
                         fill
+                        sizes="64px"
                         className="object-cover"
                         />
                     </div>

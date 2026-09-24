@@ -21,7 +21,18 @@ export default function Footer() {
     const t = useTranslations("Footer");
 
     return (
-        <footer className="bg-white px-8 pt-20 pb-6">
+            <footer
+                className="
+                    bg-white
+                    px-4
+                    pb-6
+                    pt-14
+                    sm:px-6
+                    sm:pt-16
+                    lg:px-8
+                    lg:pt-20
+                "
+            >
             {/* Gradient dashed divider */}
             <div
                 className="
@@ -37,10 +48,12 @@ export default function Footer() {
                 <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-[1.1fr_2fr_1fr_1fr]">
                 {/* Logo + Social Media */}
                 <div>
-                    <Link href="/">
-                        <Logo type="dark" />
-                    </Link>
-                    
+                <Link href="/" className="inline-block">
+                    <Logo
+                        type="dark"
+                        className="w-[181px] lg:w-[164px]"
+                    />
+                </Link>
 
                     <div className="mt-5 flex items-center gap-2">
                         <Link

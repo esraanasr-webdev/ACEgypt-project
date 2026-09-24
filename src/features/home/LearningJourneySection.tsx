@@ -74,6 +74,7 @@ export default function LearningJourneySection() {
                                 src="/images/home/journey-mask.png"
                                 alt=""
                                 fill
+                                sizes="(max-width: 768px) 100vw, 50vw"
                                 className="object-contain object-center opacity-30"
                             />
                         </div>
@@ -93,6 +94,7 @@ export default function LearningJourneySection() {
                                 src="/images/home/journey-person.png"
                                 alt="ACE academic advisor"
                                 fill
+                                sizes="(max-width: 768px) 100vw, 50vw"
                                 className="object-contain object-bottom"
                             />
                         </div>
@@ -113,6 +115,7 @@ export default function LearningJourneySection() {
                                 src="/images/home/journey-person.png"
                                 alt="ACE academic advisor"
                                 fill
+                                sizes="(max-width: 768px) 100vw, 50vw"
                                 className="object-contain object-bottom"
                             />
                         </div>
@@ -134,6 +137,7 @@ export default function LearningJourneySection() {
                                 src="/images/home/arrow.png"
                                 alt=""
                                 fill
+                                sizes="110px"
                                 className="object-contain"
                             />
                         </div>
@@ -314,6 +318,7 @@ export default function LearningJourneySection() {
                                             src={src}
                                             alt=""
                                             fill
+                                            sizes="40px"
                                             className="object-cover"
                                         />
                                     </div>

@@ -9,6 +9,7 @@ type PageHeaderConfig = {
     key: string;
     hasDescription?: boolean;
     breadcrumbKey?: string;
+    hasSearch?: boolean;
 };
 
 const pageHeaders: Record<string, PageHeaderConfig> = {
@@ -20,6 +21,7 @@ const pageHeaders: Record<string, PageHeaderConfig> = {
         key: "courses",
         hasDescription: true,
         breadcrumbKey: "courses.breadcrumb",
+        hasSearch: true,
     },
 
     "/careers": {
@@ -80,6 +82,7 @@ export default function DynamicPageHeader() {
                         : title,
                 },
             ]}
+            showSearch={page.hasSearch}
         />
     );
 }

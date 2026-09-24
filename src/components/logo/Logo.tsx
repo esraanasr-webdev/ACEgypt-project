@@ -2,44 +2,37 @@ import Image from "next/image";
 
 type LogoType = "light" | "dark";
 
-type LogoProps ={
+type LogoProps = {
     type?: LogoType;
     className?: string;
 };
 
 const logoSources = {
-    light: {
-        src: "/images/AmericanWhiteLogo.png",
-        width: 180,
-        height: 88,
-    },
-    dark: {
-        src: "/images/americancouncilLogo-dark.png",
-        width: 180,
-        height: 88,
-    },
+    light: "/images/AmericanWhiteLogo.png",
+    dark: "/images/americancouncilLogo-dark.png",
 };
 
 export default function Logo({
     type = "light",
-    className= "",
-}: LogoProps){
-    const logo = logoSources[type];
-    return(
+    className = "",
+}: LogoProps) {
+    return (
         <div
-            className={`relative shrink-0 ${className}`}
-            style={{
-                width: logo.width,
-                height: logo.height,
-            }}
+            className={`
+                relative
+                aspect-[180/88]
+                shrink-0
+                ${className}
+            `}
         >
-        <Image
-            src={logo.src}
-            alt="American Council Egypt"
-            width={logo.width}
-            height={logo.height}
-            priority
-        />
+            <Image
+                src={logoSources[type]}
+                alt="American Council Egypt"
+                fill
+                priority
+                sizes="(max-width: 640px) 130px, (max-width: 1024px) 150px, 180px"
+                className="object-contain"
+            />
         </div>
     );
 }

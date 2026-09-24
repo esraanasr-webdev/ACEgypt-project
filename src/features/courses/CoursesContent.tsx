@@ -4,9 +4,9 @@ import { useMemo, useState } from "react";
 
 import Pagination from "../../components/ui/Pagination";
 
+import { useSearchParams } from "next/navigation";
 import CoursesFilters from "./CoursesFilters";
 import CoursesGrid from "./CoursesGrid";
-import CoursesHero from "./CoursesHero";
 import CoursesToolbar from "./CoursesToolbar";
 import {
     courses,
@@ -22,7 +22,10 @@ function toggleValue(
     }
 
     export default function CoursesContent() {
-    const [search, setSearch] = useState("");
+    const searchParams = useSearchParams();
+
+    const search = searchParams.get("search") ?? "";
+
     const [categories, setCategories] = useState<string[]>([]);
     const [levels, setLevels] = useState<string[]>([]);
     const [deliveryModes, setDeliveryModes] = useState<string[]>([]);
@@ -71,11 +74,6 @@ function toggleValue(
 
     return (
         <>
-            <CoursesHero
-                search={search}
-                onSearchChange={setSearch}
-            />
-
             <section className="mx-auto max-w-[1200px] px-6 py-12">
                 <div
                     className="
